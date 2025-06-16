@@ -5,6 +5,15 @@
   --text-margin: 10px;
 }
 
+@font-face {
+  font-family: 'norsebold';
+  src: url('fonts/norse-bold-webfont.woff2') format('woff2'),
+       url('fonts/norse-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -27,7 +36,6 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
-  flex: 1;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -36,7 +44,7 @@ body {
 
 .logo-banner {
   background: rgba(0, 0, 0, 0.6);
-  padding: 20px 40px;
+  padding: 10px 30px;
   text-align: center;
   position: absolute;
   top: 20%;
@@ -49,7 +57,7 @@ body {
 
 .logo-banner .logo-name{
   color: white;
-  font-size: 2vw;       /* Responsive font size */
+  font-size: 3vw;       /* Responsive font size */
   min-font-size: 1.5em; /* Optional: set a minimum size */
   max-font-size: 2.5em;   /* Optional: set a maximum size */
   font-weight: bold;
@@ -57,12 +65,13 @@ body {
   display: flex;
   align-items: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: "norsebold";
 }
 
 .logo-banner img {
-  width: 20vw;          /* Responsive to viewport width */
-  max-width: 90px;      /* Prevents it from getting too big */
-  min-width: 40px;      /* Prevents it from getting too small */
+  width: 30vw;          /* Responsive to viewport width */
+  max-width: 100px;      /* Prevents it from getting too big */
+  min-width: 60px;      /* Prevents it from getting too small */
 }
 
 /* Right side - form container*/
@@ -103,8 +112,8 @@ body {
 }
 
 .form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px 30px;
   margin-bottom: 40px;
 }
@@ -120,9 +129,6 @@ form {
   margin-left: 10px;
 }
 
-.form-group.full-width {
-  grid-column: 1 / -1;
-}
 
 .form-group label {
   font-size: 0.85rem;
