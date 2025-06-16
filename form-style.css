@@ -10,6 +10,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   height: 100vh;
   display: flex;
+  flex: 1;
   align-items: flex-start;
   background-color: #f9f9f9;
 }
@@ -26,6 +27,7 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -40,17 +42,27 @@ body {
   top: 20%;
   width: 100%;
   display: flex;
+  flex: 1;
+  gap: 10px;
   justify-content: center;
 }
 
-.logo-banner .logo-name {
+.logo-banner .logo-name{
   color: white;
-  font-size: 3em;
+  font-size: 2vw;       /* Responsive font size */
+  min-font-size: 1.5em; /* Optional: set a minimum size */
+  max-font-size: 2.5em;   /* Optional: set a maximum size */
   font-weight: bold;
   letter-spacing: 2px;
-  padding: 40px 30px;
-  position: relative;
+  display: flex;
+  align-items: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.logo-banner img {
+  width: 20vw;          /* Responsive to viewport width */
+  max-width: 90px;      /* Prevents it from getting too big */
+  min-width: 40px;      /* Prevents it from getting too small */
 }
 
 /* Right side - form container*/
